@@ -15,6 +15,7 @@ routes.post("/profissional", ProfissionalController.store); //cadastro de prof
 routes.get("/service", ServiceController.all); //listar serviços ocultados
 routes.get("/allservice", ServiceController.index);//listar serviços não ocultados
 routes.get("/profissional", ProfissionalController.list); //listar todos os profissionais
+routes.get("/profissional/:id", ProfissionalController.unico); //listar todos os profissionais
 
 routes.get("/profissionalnv", ProfissionalController.invalidos); //listar profissionais não validados
 routes.get("/profissionalv", ProfissionalController.validados); //listar profissionais validados

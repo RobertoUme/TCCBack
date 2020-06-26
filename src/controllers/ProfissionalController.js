@@ -12,6 +12,10 @@ module.exports = {
     const profissional = await Profissional.find({});
     return res.json(profissional);
   },
+  async unico(req, res) {
+    const profissional = await Profissional.findOne({ _id: req.params.id });
+    return res.json(profissional);
+  },
   async invalidos(req, res) {
     const profissional = await Profissional.find({ status: 0 });
     return res.json(profissional);
